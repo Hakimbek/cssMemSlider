@@ -1,0 +1,306 @@
+/*----------Style of body----------*/
+
+body {
+    background-color: #262525;
+    padding: 3.75rem;
+}
+
+/*---------------------------------*/
+
+
+/*----------Inputs are used in order to move slides to the left and right.
+            Display of inputs are none. Styled labels of input are used as button.----------*/
+
+.slider-input {
+    display: none;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*----------Style of slides(image slide and text slide)----------*/
+
+.slides-wrapper, .text-wrapper {
+    overflow: hidden;
+}
+
+.slides, .texts {
+    display: flex;
+    width: 600%;
+    transition: all 500ms ease-in-out;
+}
+
+.slide, .text {
+    width: calc(100% / 6);
+}
+
+.slide img {
+    border-radius: 1.25rem;
+    width: 100%;
+    height: 40rem;
+}
+
+.text {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/*---------------------------------------------------------------*/
+
+
+/*----------Style of footer----------*/
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*---------------------------------*/
+
+
+/*----------Style of labels(buttons)----------*/
+
+.input-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.25rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.input-label:hover .input-button {
+    background-color: white;
+    border: 0.1rem white solid;
+}
+
+.input-buttons {
+    display: flex;
+    justify-content: end;
+}
+
+.input-button {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 3rem;
+    background-color: cornflowerblue;
+    border: 0.1rem cornflowerblue solid;
+}
+
+/*---------------------------------------------*/
+
+/*--------------Move image slider--------------*/
+
+#slide1:checked ~ .slides-wrapper .slides {
+    margin-left: 0;
+}
+
+#slide2:checked ~ .slides-wrapper .slides {
+    margin-left: -100%;
+}
+
+#slide3:checked ~ .slides-wrapper .slides {
+    margin-left: -200%;
+}
+
+#slide4:checked ~ .slides-wrapper .slides {
+    margin-left: -300%;
+}
+
+#slide5:checked ~ .slides-wrapper .slides {
+    margin-left: -400%;
+}
+
+#slide6:checked ~ .slides-wrapper .slides {
+    margin-left: -500%;
+}
+
+/*---------------------------------------------*/
+
+
+/*--------------Move text slider--------------*/
+
+#slide1:checked ~ .footer .text-wrapper .texts {
+    margin-left: 0;
+}
+
+#slide2:checked ~ .footer .text-wrapper .texts {
+    margin-left: -100%;
+}
+
+#slide3:checked ~ .footer .text-wrapper .texts {
+    margin-left: -200%;
+}
+
+#slide4:checked ~ .footer .text-wrapper .texts {
+    margin-left: -300%;
+}
+
+#slide5:checked ~ .footer .text-wrapper .texts {
+    margin-left: -400%;
+}
+
+#slide6:checked ~ .footer .text-wrapper .texts {
+    margin-left: -500%;
+}
+
+/*---------------------------------------------*/
+
+
+/*--------------Change color when button is focus--------------*/
+
+#slide1:active ~ .footer .input-buttons #label1 .input-button  {
+    background-color: transparent;
+    border: 0.1rem white solid;
+}
+
+#slide2:active ~ .footer .input-buttons #label2 .input-button  {
+    background-color: transparent;
+    border: 0.1rem white solid;
+}
+
+#slide3:active ~ .footer .input-buttons #label3 .input-button  {
+    background-color: transparent;
+    border: 0.1rem white solid;
+}
+
+#slide4:active ~ .footer .input-buttons #label4 .input-button  {
+    background-color: transparent;
+    border: 0.1rem white solid;
+}
+
+#slide5:active ~ .footer .input-buttons #label5 .input-button  {
+    background-color: transparent;
+    border: 0.1rem white solid;
+}
+
+#slide6:active ~ .footer .input-buttons #label6 .input-button  {
+    background-color: transparent;
+    border: 0.1rem white solid;
+}
+
+/*---------------------------------------------------------------*/
+
+
+
+/*--------------Change color when button is checked--------------*/
+
+#slide1:checked ~ .footer .input-buttons #label1 .input-button  {
+    background-color: transparent;
+    border: 0.1rem cornflowerblue solid;
+}
+
+#slide2:checked ~ .footer .input-buttons #label2 .input-button  {
+    background-color: transparent;
+    border: 0.1rem cornflowerblue solid;
+}
+
+#slide3:checked ~ .footer .input-buttons #label3 .input-button  {
+    background-color: transparent;
+    border: 0.1rem cornflowerblue solid;
+}
+
+#slide4:checked ~ .footer .input-buttons #label4 .input-button  {
+    background-color: transparent;
+    border: 0.1rem cornflowerblue solid;
+}
+
+#slide5:checked ~ .footer .input-buttons #label5 .input-button  {
+    background-color: transparent;
+    border: 0.1rem cornflowerblue solid;
+}
+
+#slide6:checked ~ .footer .input-buttons #label6 .input-button  {
+    background-color: transparent;
+    border: 0.1rem cornflowerblue solid;
+}
+
+/*---------------------------------------------------------------*/
+
+
+/*-----------------Media query-----------------*/
+
+@media (min-width: 900px) and (max-width: 1279px) {
+    .slide img {
+        height: 30rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+    .footer {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    body {
+        padding: 1.5rem;
+    }
+
+    .slide img {
+        height: 25rem;
+    }
+
+    .input-buttons {
+        margin: 1rem auto;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .footer {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    body {
+        padding: 1.5rem;
+    }
+
+    .slide img {
+        height: 20rem;
+    }
+
+    .input-buttons {
+        margin: 1rem auto;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 599px) {
+    .footer {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    body {
+        padding: 1.5rem;
+    }
+
+    .slide img {
+        height: 15rem;
+    }
+
+    .input-buttons {
+        margin: 1rem auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    .footer {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    body {
+        padding: 1.5rem;
+    }
+
+    .slide img {
+        height: 10rem;
+    }
+
+    .input-buttons {
+        margin: 1rem auto;
+    }
+}
+
+/*---------------------------------------------------*/
